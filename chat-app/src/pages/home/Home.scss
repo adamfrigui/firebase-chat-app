@@ -1,0 +1,127 @@
+ .home{
+    background-color: rgba(0, 139, 139, 0.773);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .container{
+        border: 0.9px solid white;
+        border-radius: 10px;
+        width: 65%;
+        height: 80%;
+        display: flex;
+        overflow: hidden;
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+        box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+
+        .sidebar{
+            flex: 1;
+             background-color: rgba(0, 91, 91, 0.773);
+            
+        }
+        .chat{
+            flex: 2;
+            .chatInfo{
+                height: 50px;
+                background: rgba(0, 118, 118, 0.773);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px;
+                color: lightgray;
+            }
+            .chatIcons{
+                display: flex;
+                gap: 10px;
+                svg{
+                    cursor: pointer;
+                }
+            }
+            .messages{
+                background: #fcfcfca7;
+                padding: 10px;
+                height: calc(100% - 160px);
+                overflow-y: scroll;
+                .message{
+                    display: flex;
+                    gap: 20px;
+                    margin-top: 20px;
+                    .messageInfo{
+                        display: flex;
+                        flex-direction: column;
+                        color: gray;
+                        font-weight: 300;
+                        font-size: 14px;
+                        margin-bottom: 20px;
+                        img{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                        }
+                    }
+                    .messageContent{
+                        max-width: 80%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        img{
+                            width: 50%;
+                        }
+                        p{
+                            background: white;
+                            padding: 10px 20px;
+                            border-radius: 0px 10px 10px 10px;
+                            max-width: max-content;
+                        }
+                    }
+                    &.back{
+                        flex-direction: row-reverse;
+                        .messageContent{
+                            align-items: flex-end;
+                        p{
+                            background-color: rgba(255, 255, 255, 0.727);
+                            border-radius: 10px 0px 10px 10px;
+                        }}
+                    }
+                }
+            }
+            .input{
+                height: 50px;
+                background: white;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                input{
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    font-size: 18px;
+                    &::placeholder{
+                        color: lightgray;
+                    }
+                }
+                .send{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    svg{
+                        display: flex;
+                        cursor: pointer;
+                    }
+                    button{
+                        border: none;
+                        padding: 10px 15px;
+                        color: white;
+                        cursor: pointer;
+                        background-color: rgb(42, 132, 102);
+                    }
+                }
+            }
+        }
+    }
+ }
